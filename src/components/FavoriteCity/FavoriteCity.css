@@ -1,0 +1,19 @@
+.favoritecity {
+    width: 15rem;
+    height: 15rem;
+    padding: 1.5rem;
+    margin: 1rem;
+    border: 2px solid grey;
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.favoritecity__head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

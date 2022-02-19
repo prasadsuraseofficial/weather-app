@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #022C51;
+  --secondary: #00FFFF;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  overflow-y: hidden;
+  /* overflow-x: hidden; */
+}
+
+.App {
+  display: flex;
+}
+
+/* all icons throughout app */
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+button, a {
+  cursor: pointer;
+}

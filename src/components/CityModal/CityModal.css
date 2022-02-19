@@ -1,0 +1,38 @@
+.citymodal {
+    border: 1px solid var(--primary);
+    padding: 0.5rem;
+}
+
+.citymodal > h4 {
+    /* border-bottom: 2px solid var(--primary); */
+    padding: 0.5rem;
+}
+
+.citymodal > input {
+    /* border-bottom: 2px solid var(--primary); */
+    padding: 1rem 0.5rem;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+/* scrollable cities box */
+.citymodal__cities {
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+/* cities box scrollbar customization */
+.citymodal__cities::-webkit-scrollbar {
+   width: 7px;
+}
+  
+.citymodal__cities::-webkit-scrollbar-track {
+   background-color: lightgrey;
+ }
+  
+.citymodal__cities::-webkit-scrollbar-thumb {
+   background-color: var(--primary);
+   border-radius: 20px;
+}
