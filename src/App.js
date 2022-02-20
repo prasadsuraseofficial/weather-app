@@ -3,10 +3,12 @@ import { Routes, Route } from "react-router-dom"
 
 import './App.css';
 import SideNav from './components/SideNav/SideNav';
-import Cities from './pages/Cities';
+
+// import Cities from './pages/Cities';
 // import Home from './pages/Home';
 
-const Home = React.lazy(() => import("./pages/Home"));
+const HomeContainer = React.lazy(() => import("./containers/HomeContainer"));
+const CitiesContainer = React.lazy(() => import("./containers/CitiesContainer"));
 
 function App() {
   return (
@@ -16,8 +18,9 @@ function App() {
 
       <Suspense fallback={<h2>Loading...</h2>}>
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cities" element={<Cities />} />
+            <Route path="/" element={<HomeContainer />} />
+            {/* <Route path="/cities" element={<Cities />} /> */}
+            <Route path="/cities" element={<CitiesContainer />} />
         </Routes>
       </Suspense>
 

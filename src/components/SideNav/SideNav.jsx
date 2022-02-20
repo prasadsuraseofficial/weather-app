@@ -1,7 +1,7 @@
 import React from 'react'
 import "./SideNav.css"
 import { FaHome, FaCity } from "react-icons/fa"
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const SideNav = () => {
     return (

@@ -1,10 +1,13 @@
 .favoritecity {
-    width: 15rem;
+    min-width: 15rem;
+    max-width: 22rem;
     height: 15rem;
-    padding: 1.5rem;
+    padding: 1rem;
     margin: 1rem;
-    border: 2px solid grey;
+    border: 1px solid grey;
     border-radius: 7px;
+    box-shadow: 2px 3px 8px grey;
+    /* box-shadow: 1px 1px 10px aquamarine; */
 
     display: flex;
     flex-direction: column;
@@ -17,3 +20,41 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
+.favoritecity__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 10rem;
+}
+
+.favoritecity__body--row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favoritecity__body--row > h1 {
+    font-weight: lighter;
+    color: brown;
+}
+
+.favoritecity__body--mapslink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.favoritecity__body--mapslink:visited {
+    color: rgb(0,0,238);
+}
+
+.favoritecity__body--mapslink:active {
+    color: red;
+}
+
+

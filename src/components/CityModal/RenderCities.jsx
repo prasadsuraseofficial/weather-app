@@ -1,24 +1,18 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback } from 'react'
 import "./CityModal.css"
 
 import { FixedSizeList } from 'react-window'
-import CityRow from '../CityRow/CityRow'
+import CityRowContainer from '../../containers/CityRowContainer'
 
 const RenderCities = (props) => {
 
-    console.log(props.cities)
-
     const Row = useCallback(({ index, style }) => {
 
-        const city = props.cities[index] || "";
-        // const city = filteredCities[index] || "";
+        const city = props.cityList[index] || "";
 
         return (
             <div style={style}>
-                <CityRow key={city} cityName={city} onClick={() => {
-                    props.addNewCity(city);
-                    props.setActiveCity(city);
-                }} />
+                <CityRowContainer key={city} cityName={city} value={1} />
             </div>
         )
     }, []);
@@ -30,8 +24,7 @@ const RenderCities = (props) => {
                     height={300}
                     width={600}
                     itemSize={55}
-                    itemCount={props.cities.length}
-                    // itemCount={filteredCities.length}
+                    itemCount={props.cityList.length}
                     className="citymodal__cities"
                 >
                     {Row}

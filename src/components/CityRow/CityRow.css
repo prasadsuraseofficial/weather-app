@@ -25,3 +25,8 @@
 .cityrow > p {
     font-weight: 200;
 }
+
+.cityrow__active {
+    background-color: var(--primary);
+    color: white;
+}

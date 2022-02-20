@@ -17,6 +17,12 @@
     outline: none;
 }
 
+.citymodal__fallback {
+    text-align: center;
+    color: red;
+    padding: 1rem;
+}
+
 /* scrollable cities box */
 .citymodal__cities {
     height: 50vh;
