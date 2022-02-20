@@ -1,3 +1,4 @@
+// deployed url - https://salty-ocean-19568.herokuapp.com/
 require('dotenv').config()
 const express = require("express")
 const cors = require("cors")

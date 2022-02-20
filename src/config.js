@@ -1,5 +1,6 @@
 // export const API_BASE_URI = "https://countriesnow.space/api/v0.1/countries/cities"
-export const API_BASE_URI = "http://localhost:5000/"
+// export const API_BASE_URI = "http://localhost:5000/"
+export const API_BASE_URI = "https://salty-ocean-19568.herokuapp.com"
 export const WEATHER_API_BASE_URI = "https://api.openweathermap.org/data/2.5/weather"
 export const WEATHER_ICON_BASE_URI = "https://openweathermap.org/img/wn"
 // export const WETHER_ICON_BASE_URI = "https://openweathermap.org/img/wn/02d@4x.png"
