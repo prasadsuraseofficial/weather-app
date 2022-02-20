@@ -1,4 +1,6 @@
+require("dot-env")
 const http = require("http");
+const PORT = process.env.PORT || 5000;
 
 const data = [
     {
@@ -6126,4 +6128,4 @@ http.createServer((req, res) => {
 
     res.end();
 
-}).listen(5000);
+}).listen(PORT);
