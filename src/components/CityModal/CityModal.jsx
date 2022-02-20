@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from "react"
+import React, { useState, useEffect } from "react"
 import "./CityModal.css"
 import axios from "axios";
 import { RenderCities } from "../../components"
