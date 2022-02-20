@@ -1,6 +1,11 @@
 require("dot-env")
-const http = require("http");
-const PORT = process.env.PORT || 5000;
+const express = require("express")
+const cors = require("cors")
+const app = express()
+const PORT = process.env.PORT || 5000
+
+app.use(express.json())
+app.use(cors())
 
 const data = [
     {
@@ -6111,21 +6116,32 @@ const data = [
 ];
 
 
-http.createServer((req, res) => {
-
-    const headers = {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
-        "Access-Control-Max-Age": 2592000, // 30 days
-        /** add other headers as per requirement */
-      };
-    
-    res.writeHead(200, headers);
-
+app.get("/", (req, res) => {
+ 
     const cityNames = data.map((row) => row.name);
+    
+    res.json(cityNames);
+})
 
-    res.write(JSON.stringify(cityNames));
+app.listen(PORT, () => {
+    console.log("app is up on : " + PORT)
+})
 
-    res.end();
+// http.createServer((req, res) => {
 
-}).listen(PORT);
+//     const headers = {
+//         "Access-Control-Allow-Origin": "*",
+//         "Access-Control-Allow-Methods": "OPTIONS, POST, GET",
+//         "Access-Control-Max-Age": 2592000, // 30 days
+//         /** add other headers as per requirement */
+//       };
+    
+//     res.writeHead(200, headers);
+
+//     const cityNames = data.map((row) => row.name);
+
+//     res.write(JSON.stringify(cityNames));
+
+//     res.end();
+
+// }).listen(PORT);
